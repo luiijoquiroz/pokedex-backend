@@ -10,7 +10,7 @@ import { isValidObjectId } from 'mongoose';
 export class ParseMongoIdPipe implements PipeTransform {
   transform(value: string, metadata: ArgumentMetadata) {
     if (!isValidObjectId(value)) {
-      throw new BadRequestException(`${value} is not a valid id`);
+      throw new BadRequestException(`${value} is not a valid id, ${metadata}`);
     }
     return value;
   }

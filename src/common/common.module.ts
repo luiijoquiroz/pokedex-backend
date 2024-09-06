@@ -1,4 +1,7 @@
 import { Module } from '@nestjs/common';
-
-@Module({})
+import { FetchAdapter } from '../common/adapters/fecth.adapter';
+@Module({
+  providers: [FetchAdapter],
+  exports: [FetchAdapter],
+})
 export class CommonModule {}
