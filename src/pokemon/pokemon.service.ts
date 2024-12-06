@@ -28,6 +28,7 @@ export class PokemonService {
     createPokemonDto.name = createPokemonDto.name.toLowerCase();
     try {
       const pokemon = await this.pokemonModel.create(createPokemonDto);
+      console.log(pokemon);
       return pokemon;
     } catch (error) {
       this.handleException(error);

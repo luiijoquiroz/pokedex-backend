@@ -47,8 +47,6 @@ http://localhost:3000/api/v2/seed
 docker-compose -f docker-compose.prod.yaml --env-file .env.prod up --build
 ```
 
-
-
 # Notas
 Heroku redeploy sin cambios:
 ```
